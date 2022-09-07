@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="updateStaffDataController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="ID:">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Name:" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Role:" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Phone:" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Date of Birth:" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Address:" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="tf_name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tf_address" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="tf_phone" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="tf_email" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker fx:id="dateBirth" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Date of Hiring:" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <DatePicker fx:id="dateHire" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Email:" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Button fx:id="btnUpdate" onAction="#setBtnUpdate" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Update" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="76.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="tf_id" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="cb_role" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btnSearch" onAction="#setBtnSearch" mnemonicParsing="false" text="Search" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </center>
+   <left>
+      <VBox prefHeight="344.0" prefWidth="161.0" spacing="15.0" style="-fx-background-color: FFFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_newStaff" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_newStaff" prefHeight="37.0" prefWidth="110.0" text="New Staff Data">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btn_searchStaff" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_SearchStaffOnAction" text="Search Staff Data">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btn_updateStaff" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_updateStaff" text="Update Staff Data">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btn_deleteStaff" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_deleteStaff" text="Delete Staff Data">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btn_attendence" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_Attendence" prefHeight="37.0" prefWidth="110.0" text="Attendance">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btn_attdReport" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_reportData" text="Attendance Report">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="17.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <top>
+      <HBox prefHeight="70.0" prefWidth="600.0" spacing="5.0" style="-fx-background-color: FFF21A;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logopn.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="70.0" prefWidth="381.0" style="-fx-background-color: FFF21A;" text="Update Employee" textAlignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button id="btn_back" mnemonicParsing="false" onAction="#setBtn_back" prefHeight="25.0" prefWidth="68.0" text="Back">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btn_logout" mnemonicParsing="false" onAction="#btn_logoutOnAction" prefHeight="25.0" prefWidth="68.0" text="Log Out">
+               <HBox.margin>
+                  <Insets right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

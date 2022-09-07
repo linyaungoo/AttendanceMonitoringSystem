@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="YearlyReportController">
+    <left>
+        <VBox prefHeight="344.0" prefWidth="161.0" spacing="15.0" style="-fx-background-color: FFFFFFF;" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btn_newStaff" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_newStaff" prefHeight="37.0" prefWidth="110.0" text="New Staff Data">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btn_searchStaff" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_SearchStaffOnAction" text="Search Staff Data">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btn_updateStaff" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_updateStaff" text="Update Staff Data">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btn_deleteStaff" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_deleteStaff" text="Delete Staff Data">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btn_attendence" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_Attendence" prefHeight="37.0" prefWidth="110.0" text="Attendance">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btn_attdReport" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setBtn_reportData" text="Attendance Report">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets top="17.0" />
+            </BorderPane.margin>
+        </VBox>
+    </left>
+    <top>
+        <HBox prefHeight="70.0" prefWidth="600.0" spacing="5.0" style="-fx-background-color: FFF21A;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="70.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logopn.png" />
+                    </image>
+                </ImageView>
+                <Label alignment="CENTER" prefHeight="70.0" prefWidth="381.0" style="-fx-background-color: FFF21A;" text="Attendance Report(Yearly)" textAlignment="CENTER">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+                <Button id="btn_back" mnemonicParsing="false" onAction="#setBtn_back" prefHeight="25.0" prefWidth="68.0" text="Back">
+                    <HBox.margin>
+                        <Insets top="5.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="btn_logout" mnemonicParsing="false" onAction="#btn_logoutOnAction" prefHeight="25.0" prefWidth="68.0" text="Log Out">
+                    <HBox.margin>
+                        <Insets right="5.0" top="5.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </top>
+    <right>
+        <VBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="301.0" prefWidth="439.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane prefHeight="294.0" prefWidth="439.0">
+                    <children>
+                        <Label layoutX="31.0" layoutY="14.0" text="Year:" />
+                        <Label layoutX="31.0" layoutY="47.0" text="ID:" />
+                        <TextField fx:id="tfID" layoutX="101.0" layoutY="43.0" prefHeight="25.0" prefWidth="129.0" />
+                        <Button fx:id="btn_searchReport" layoutX="271.0" layoutY="44.0" mnemonicParsing="false" onAction="#setBtnSearchReport" text="Serach" />
+                        <Label fx:id="lName" layoutX="55.0" layoutY="100.0" text="Name:" visible="false" />
+                        <Label fx:id="lId" layoutX="55.0" layoutY="125.0" text="ID:" visible="false" />
+                        <Label fx:id="lDate" layoutX="55.0" layoutY="150.0" text="Date:" visible="false" />
+                        <Label fx:id="lTotalDay" layoutX="55.0" layoutY="175.0" text="Total Day:" visible="false" />
+                        <Label fx:id="lTotalLeave" layoutX="55.0" layoutY="200.0" text="Total Leave:" visible="false" />
+
+                        <Label fx:id="sName" layoutX="150.0" layoutY="100.0" text="Label" visible="false" />
+                        <Label fx:id="sId" layoutX="150.0" layoutY="125.0" text="Label" visible="false" />
+                        <Label fx:id="sDate" layoutX="150.0" layoutY="150.0" text="Label" visible="false" />
+                        <Label fx:id="sTotalDay" layoutX="150.0" layoutY="175.0" text="Label" visible="false" />
+                        <Label fx:id="sTotalLeave" layoutX="150.0" layoutY="200.0" text="Label" visible="false" />
+                        <Button fx:id="btn_view" layoutX="150.0" layoutY="240.0" mnemonicParsing="false" onAction="#setBtnViewOnTable" text="View In Table" visible="false" />
+                  <TextField fx:id="tf_year" layoutX="101.0" layoutY="10.0" prefHeight="25.0" prefWidth="128.0" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </right>
+</BorderPane>
